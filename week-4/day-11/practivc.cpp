@@ -14,15 +14,11 @@ int main()
         {
             cin>>a[i];
         }
-        long long int ans1;
-        long long int ans2;
-        long long int ans;
+        long long int ans=INT_MAX;
 
         for(long long int i=0;i<n;i++)
         {
-            ans1=abs(a[i]-a[i+1]);
-            ans2=abs(a[i-1]-a[i]);
-            ans=min(ans1,ans2);
+            ans=abs(a[i]-a[i+1]));
         }
         cout<<ans<<endl;
     }
