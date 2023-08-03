@@ -6,25 +6,25 @@ int main()
     int t;cin>>t;
     while(t--)
     {
-        int n,k;cin>>n>>k;
-        vector<long long int>a;
-        for(int i=0;i<n;i++)
+        long long n,k;cin>>n>>k;
+        long long a[200005];
+
+        for(int i=1;i<=n;i++)
         {
-            int x;
-            cin>>x;
-            a.push_back(x);
+            cin>>a[i];
         }
-        int sum1=0,sum2=0;
-        sort(a.begin(),a.end());
-        for(int i=0;i<n-1;i++) sum1+=a[i];
 
-        for(int i=2;i<n;i++) sum2+=a[i];
+        sort(a+1,a+1+n);
+        for(int i=2;i<=n;i++)
+        {
+            a[i]+=a[i-1];
+        }
 
-
-
-        if(sum1>=sum2) cout<<sum1<<endl;
-        else cout<<sum2<<endl;
-
-
+        long long ans=0;
+        for(int i=0;i<=k;i++)
+        {
+            ans=max(ans,a[n-k+i]-a[i*2]);
+        }
+        cout<<ans<<endl;
     }
 }

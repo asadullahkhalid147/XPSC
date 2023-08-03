@@ -13,6 +13,7 @@ int main()
         vector<long long>arr(n);
         int ptr=0;
 
+        cout<<n<<endl;
         for(long long i=b;i<=a;i++)
         {
             arr[ptr++]=i;
