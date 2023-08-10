@@ -3,14 +3,10 @@ using namespace std;
 
 int main()
 {
-    int t;cin>>t;
+    long long t;cin>>t;
     while(t--)
     {
-        int n,k;cin>>n>>k;
-        if(n/4==0 && k/4==0)
-        {
-            if(n+k>=4) cout<<1<<endl;
-            else cout<<0<<endl;
-        }
+        long long a,b;cin>>a>>b;
+        cout<<min((a+b)/4,min(a,b))<<endl;
     }
 }
