@@ -7,20 +7,20 @@ template<typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_
 
 int main()
 {
-    pbds<int>s;
-    s.insert(2);
-    s.insert(4);
-    s.insert(9);
-    s.insert(2);
-    s.insert(7);
-    s.insert(1);
-    s.insert(7);
-
+    pbds<pair<int,int>>s;
+    s.insert({2,1});
+    s.insert({2,2});
+    s.insert({4,1});
+    s.insert({9,1});
+    s.insert({2,3});
+    s.insert({7,1});
+    s.insert({1,1});
+    s.insert({7,2});
 
     for(auto val: s)
-        cout<<val<<" ";
+        cout<<val.first<<" ";
     cout<<endl;
 
-    cout<< s.order_of_key(7)<<endl;/// time complexity: log(n);
+//    cout<< *s.find_by_order(3)<<endl;/// time complexity: log(n);
 }
 
