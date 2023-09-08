@@ -73,4 +73,11 @@ int main()
     if(n>1)cnt[n]++;
     for(auto [x,y]:cnt)
         cout<<x<<" "<<y<<endl;
+
+    int x,y;
+    x=900;y=23814;
+    int gcd=__gcd(x,y);
+    int lcm = (x*y)/gcd;
+    cout<<gcd<<endl;
+    cout<<lcm<<endl;
 }
